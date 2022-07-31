@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+</head>
+<body>
+<h3>TOPIC : Regular Expressions</h3>
+<script>
+function valid_email(str)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+if(mailformat.test(str))
+{  
+document.write("Valid email address!");  
+}  
+else  
+{  
+document.write("You have entered an invalid email address!");  
+}
+}
+valid_email('bindumounika56@gmial.com');
+</script>
+<h3>TOPIC : Objects</h3>
+<h4>object.isFrozen()</h4>
+<script>
+document.write(Object.isFrozen({ name: "JavaScript" }));
+</script>
+<h4>object.assign()</h4>
+<script>
+const object1 = {  
+  a: 1,  
+  b: 2,  
+  c: 3  
+};  
+const object3= {  
+  g: 1,  
+  h: 2,  
+  i: 3  
+};    
+  
+const object2 = Object.assign({c: 4, d: 5}, object1);  
+const object4 = Object.assign({g: 34, h: 25}, object3);  
+document.write(object2.c, object2.d);  
+document.write(object4.g, object4.h);  
+</script>
+<h4> object.create()</h4>
+<script>
+let Student = {
+  name: "Lisa",
+  age: 24,
+  marks: 78.9,
+  display() {
+    document.write("Name:", this.name);
+  }
+};
+let std1 = Object.create(Student);
+std1.name = "Bindu";
+std1.display();
+</script>
+<h4>object.seal()</h4>
+<script>
+
+</script>
+<h4>object.isSealed()</h4>
+<script>
+let obj = { value: "A B C" };
+Object.preventExtensions(obj);
+document.write(Object.isSealed(obj));
+</script>
+</body>
+</html>
